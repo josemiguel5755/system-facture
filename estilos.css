@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+     background-color:#e1edf9 ; 
+    /* background-color: #263238 ; */
+    
+    overflow-X: hidden;
+}
+
+.navegacion {
+    padding: 5px;
+    background-color: #ffffff;
+    width: 100%;
+    height: 60px;
+   display: flex;
+   position: fixed;
+   z-index: 20;
+}
+
+
+/* .menu {
+  
+    position: fixed;
+   top: 90px;
+   bottom: 0;
+    
+    display: flex; 
+    justify-content: left; 
+   background-color: #ffffff;
+   padding: 5px;
+  border-radius: 5px;
+   width: 17%;
+   height: 650px;
+    position: sticky;
+} */
+
+.menu li {
+    list-style: none;
+    margin: 5px;
+
+  }
+
+  .menu ul {
+    margin-top: 63px;
+    position: fixed;
+   
+    background-color: #ffffff;
+    padding: 5px;
+   border-radius: 5px;
+    width: 17%;
+    height: 650px;
+  }
+
+  .menu a {
+    color: black;
+    text-decoration: none;
+   font-size: 18px;
+   margin: 10px;
+
+
+  }
+
+
+.menu li:hover {
+    background-color:#d2e8ff ; 
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.menu img {
+   float: left;
+  position: relative;
+  bottom: 4px;
+ 
+ }
+
+
+
+.container {
+    max-width: 72%;
+    height: 370px;
+    margin-left: 20%;
+    padding: 10px;
+    background-color: #ffffff; 
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   position: relative;
+    top: 90px;
+}  
+
+
+
+/* header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+} */
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+
+
+.horizontal-containers {
+    display: flex;
+    gap: 90px;
+    margin-bottom: 20px;
+    
+}
+
+.horizontal-containers section {
+    flex: 1;
+}
+
+section {
+     margin-bottom: 20px; 
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* legend {
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+} */
+
+.general-info fieldset {
+    width: 200px;
+    padding: 10px;
+    margin: 0;
+}
+
+.suppliers-clients {
+    margin-top: 10px;
+    
+   
+}
+
+.suppliers-clients fieldset {
+    width: 300px;
+}
+
+.general-info {
+    position: relative;
+    left: 10px;
+}
+
+.suppliers-clients2 fieldset {
+    position: relative;
+    left: 10%;
+    width: 280px;
+    height: 335px;
+    margin-top: 10px;
+
+}
+
+.field-group2 label {
+    font-size: 18px;
+}
+
+
+.field-group2 select {
+    display: flex;
+    width: 70%;
+    height: 25px;
+}
+
+
+.field-group2 input {
+    display: flex;
+    width: 70%;
+    height: 25px;
+}
+
+.suppliers-clients2 {
+    position: relative;
+    right: 90px;
+  
+}
+
+
+.suppliers-clients3 {
+    margin-top: 10px;
+    position: relative;
+    right:12%;
+   
+}
+
+.suppliers-clients3 fieldset {
+    width: 380px;
+    height: 76%;
+}
+
+
+.field-group3 select {
+    display: flex;
+    width: 50%;
+    height: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.field-group3 label {
+    font-size: 18px;
+}
+
+
+.field-group3 input {
+    display: flex;
+   
+   
+    width: 50%;
+    height: 25px;
+}
+
+
+
+
+.inicialInput{
+    display: flex;
+    flex-direction: row-reverse;
+    left: 29%;
+    position: relative;
+    bottom: 300px;
+
+}
+
+.inicialInput label{
+    position: relative;
+    bottom: 20px;
+    right: 135px;
+   
+
+}
+
+.inicialInput input{
+   display: flex;
+    width: 40%;
+   flex-direction: row-reverse;
+  
+
+}
+
+
+.field-group, .presentation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.field-group label, .presentation label {
+    flex: 1 1 30%;
+}
+
+.field-group label {
+    font-size: 18px;
+}
+
+.field-group input {
+   width: 70%;
+   height: 25px;
+}
+
+
+
+
+.general-info textarea  {
+    height: 120px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.titulos {
+    position: relative;
+    bottom: 30px;
+  
+}
+
+.titulos ul {
+    
+    display: flex;
+}
+
+.titulos li {
+    margin: 50px;
+    display: flex;
+    position: relative;
+    bottom: 30px;
+    font-size: 20px;
+    color: #000000;
+}
+
+.contenedor  {
+    background-color: #ffffff;
+padding-top: 200px;
+max-width: 90%;
+max-height: 300px;
+position: relative;
+bottom: 100px;
+border-radius: 5px;
+
+
+}
+
+
+.beneficio button {
+    width: 30%;
+    height: 40px;
+    font-size: 16px;
+    padding: 5px;
+    background-color: rgb(42, 134, 255);
+    color: #ffffff;
+    border: none;
+  position: relative;
+  left: 20%;
+  bottom: 100px;
+    cursor: pointer;
+   
+}
+
+
+
+.presentacion fieldset {
+    height: 270px;
+    width: 95%;
+    position: relative;
+    bottom: 190px;
+    left: 2%;
+}
+
+.presentacion label {
+    font-size: 18px;
+}
+
+.presentacion input {
+    display: flex;
+    width: 20%;
+    height: 25px;
+}
+
+.presentacion select {
+    display: flex;
+    width: 20%;
+    height: 25px;
+}
+
+.beneficio  {
+   
+    
+    
+    margin-left: 25%;
+    position: relative;
+    bottom: 174px;
+}
+
+.beneficio input{
+   display: flex;
+ width: 25%;
+   
+  
+    height: 25px;
+   flex-direction: column;
+}
+
+.venta {
+    position: relative;
+    left: 58%;
+    bottom: 320px;
+}
+
+.venta input {
+    width: 40%;
+}
+
+.minimo {
+    display: flex;
+    flex-flow: column;
+  position: relative;
+  left: 29%;
+  bottom: 193px;
+}
+
+.credito {
+    position: relative;
+    left: 29%;
+    bottom: 175px;
+}
+
+.inicialInput{
+    position: relative;
+    left: 35%;
+    
+}
+
+/* .beneficio label{
+   position: relative;
+   bottom: 20px;
+   left: 20%;
+  line-height: 5;
+
+}  */
+
+/* #descripcion {
+    resize: none; 
+}  */
+
+/* footer {
+    background-color: #ffffff;
+    padding: 5px;
+    height: 60px;
+} */

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackdere Tech</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script>
+        function recalcularTodo() {
+            // Obtiene el precio de compra sin ITBIS, porcentaje de ITBIS, y porcentaje de beneficio
+            let precioSinITBIS = parseFloat(document.getElementById('precioSinITBIS').value) || 0;
+            let itbis = parseFloat(document.getElementById('itbis').value) || 0;
+            let beneficio = parseFloat(document.getElementById('beneficio').value) || 0;
+
+            // Calcula el precio con ITBIS
+            let precioConITBIS = precioSinITBIS + (precioSinITBIS * (itbis / 100));
+            document.getElementById('precioConITBIS').value = precioConITBIS.toFixed(2);
+
+            // Calcula el precio de venta (precio con ITBIS + %Benef.)
+            let precioVenta = precioConITBIS + (precioConITBIS * (beneficio / 100));
+            document.getElementById('precioVenta').value = precioVenta.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navegacion">
+            <h1>sistema</h1>
+        </nav>
+    </header>
+
+    <div class="menu">
+        <ul>
+            <li><a href="">Inicio
+                <img src="imagenes/bx-home.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="">Facturacion
+                <img src="imagenes/bx-notepad.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="">Inventario
+                <img src="imagenes/bx-box.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="">Cuentas por cobrar
+                <img src="imagenes/bx-money-withdraw.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="">Control de caja
+                <img src="imagenes/bx-cog.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="">Contabilidad
+                <img src="imagenes/bx-calculator.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="">Progreso
+                <img src="imagenes/bx-bar-chart.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="">Cotizacion
+                <img src="imagenes/bx-purchase-tag-alt.svg" alt="">
+            </a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="horizontal-containers">
+            <section class="general-info">
+                <fieldset>
+                    <legend>Información General</legend>
+                    <div class="field-group">
+                        <label for="codigo">Código:</label>
+                        <input type="text" id="codigo" placeholder="00007">
+
+                        <label for="descripcion">Descripción:</label>
+                        <input type="text">
+
+                        <label for="ref1">Ref. #1:</label>
+                        <input type="text" id="ref1" placeholder="990">
+
+                        <label for="ref2">Ref. #2:</label>
+                        <input type="text" id="ref2">
+                    </div>
+                </fieldset>
+            </section>
+
+            <section class="suppliers-clients2">
+                <fieldset>
+                    <div class="field-group2">
+                        <label for="proveedor">Depto</label>
+                        <select name="" id="">
+                            <option value="">generar</option>
+                        </select>
+                        <br>
+                        <label for="cliente">Marca:</label>
+                        <select name="" id="">
+                            <option value="">Seleccione</option>
+                        </select>
+                        <br>
+                        <label for="descuento">Categoría:</label>
+                        <select name="" id="">
+                            <option value="">seleccione</option>
+                        </select>
+                        <br>
+                        <label for="">Modelo</label>
+                        <input type="text">
+                        <br>
+                        <label for="">Color</label>
+                        <input type="text">
+                    </div>
+                </fieldset>
+            </section>
+
+            <section class="suppliers-clients3">
+                <fieldset>
+                    <div class="field-group3">
+                        <label for="proveedor">Unidad Compra</label>
+                        <select name="" id="">
+                            <option value="">UDE</option>
+                        </select>
+                        <br>
+                        <label for="precioSinITBIS">Prec.Cmpr (sin ITBIS):</label>
+                        <input type="tel" id="precioSinITBIS" oninput="recalcularTodo()">
+                        <br>
+                        <label for="itbis">%ITBIS:</label>
+                        <input type="tel" id="itbis" oninput="recalcularTodo()">
+                        <br>
+                        <label for="precioConITBIS">Prec.Cmpr (con ITBIS):</label>
+                        <input type="text" id="precioConITBIS" readonly>
+                        <br>
+                        <label for="beneficio">%Benef.:</label>
+                        <input type="tel" id="beneficio" oninput="recalcularTodo()">
+                        <br>
+                        <div class="venta">
+                        <label for="precioVenta">Precio de venta:</label>
+                        <input type="text" id="precioVenta" readonly>
+                        </div>
+                        <br>
+                        <div class="inicialInput">
+                            <label for="cantidadInicial">Cantidad inicial:</label>
+                            <input type="num" id="cantidadInicial">
+                        </div>
+                    </div>
+                </fieldset>
+            </section>
+        </div> <!-- End of horizontal-containers -->
+
+        <section class="titulos">
+            <ul>
+                <li>Precios de ventas y Otros</li>
+                <li>Combos</li>
+                <li>Proveedores</li>
+                <li>Clientes</li>
+            </ul>
+        </section>
+
+        <div class="content">
+            <div class="contenedor">
+                <div class="presentacion">
+                    <fieldset>
+                        <legend>Presentacion #1</legend>
+                        <label for="unidades">Unidades (Conteo):</label>
+                        <select name="" id="unidades">
+                            <option value="">Seleccione</option>
+                        </select>
+                        <br>
+                        <label for="descMax">% Desc. Max:</label>
+                        <input type="text" id="descMax">
+                        <br>
+                        <label for="comision">% Comision:</label>
+                        <input type="text" id="comision">
+                        <div class="beneficio">
+                            <form action="">
+                                <label for="beneficio2">Beneficio:</label>
+                                <input type="text" id="beneficio2">
+                                <br>
+                                <label for="precioLista">Precio Lista:</label>
+                                <input type="text" id="precioLista">
+                                <br>
+                                <label for="beneficio3">Beneficio:</label>
+                                <input type="text" id="beneficio3">
+                                <br>
+                                <div class="minimo">
+                                    <label for="precioMinimo">Precio mínimo:</label>
+                                    <input type="text" id="precioMinimo">
+                                    <br>
+                                    <label for="beneficio4">%Beneficio:</label>
+                                    <input type="text" id="beneficio4">
+                                    <br>
+                                    <label for="precioMay">Precio por mayor:</label>
+                                    <input type="text" id="precioMay">
+                                    <div class="credito">
+                                        <label for="credito">Crédito:</label>
+                                        <input type="text" id="credito">
+                                    </div>
+                                </div>
+                                <button type="submit">Guardar</button>
+                            </form>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
