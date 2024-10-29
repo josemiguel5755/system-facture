@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackdere Tech - Gestión de Inventario</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script>
+        function recalcularTodo() {
+            let precioSinITBIS = parseFloat(document.getElementById('precioSinITBIS').value) || 0;
+            let itbis = parseFloat(document.getElementById('itbis').value) || 0;
+            let beneficio = parseFloat(document.getElementById('beneficio').value) || 0;
+
+            let precioConITBIS = precioSinITBIS + (precioSinITBIS * (itbis / 100));
+            document.getElementById('precioConITBIS').value = precioConITBIS.toFixed(2);
+
+            let precioVenta = precioConITBIS + (precioConITBIS * (beneficio / 100));
+            document.getElementById('precioVenta').value = precioVenta.toFixed(2);
+        }
+
+        function buscarProducto() {
+            const filtro = document.getElementById("busqueda").value.toLowerCase();
+            const filas = document.querySelectorAll("#tablaInventario tbody tr");
+
+            filas.forEach(fila => {
+                const texto = fila.textContent.toLowerCase();
+                fila.style.display = texto.includes(filtro) ? "" : "none";
+            });
+        }
+    </script>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+            color: #333;
+        }
+        .navegacion, .menu, .content {
+            margin-bottom: 20px;
+        }
+
+        /* Barra de navegación */
+        .navegacion {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .navegacion h1 {
+            margin: 0;
+        }
+
+        /* Menú de navegación lateral */
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+        .menu ul li {
+            margin: 15px 0;
+            text-align: left;
+        }
+        .menu ul li a {
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .menu ul li a img {
+            margin-left: 10px;
+            width: 20px;
+        }
+
+        /* Sección de inventario */
+        .search-bar {
+            margin-bottom: 10px;
+            text-align: right;
+        }
+        .search-bar input[type="text"] {
+            padding: 5px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navegacion">
+            <h1>Hackdere Tech - Sistema de Inventario</h1>
+        </nav>
+    </header>
+
+    <div class="menu">
+        <ul>
+            <li><a href="#">Inicio <img src="imagenes/bx-home.svg" alt=""></a></li>
+            <li><a href="#">Facturación <img src="imagenes/bx-notepad.svg" alt=""></a></li>
+            <li><a href="#">Inventario <img src="imagenes/bx-box.svg" alt=""></a></li>
+            <li><a href="#">Cuentas por cobrar <img src="imagenes/bx-money-withdraw.svg" alt=""></a></li>
+            <li><a href="#">Control de caja <img src="imagenes/bx-cog.svg" alt=""></a></li>
+            <li><a href="#">Contabilidad <img src="imagenes/bx-calculator.svg" alt=""></a></li>
+            <li><a href="#">Progreso <img src="imagenes/bx-bar-chart.svg" alt=""></a></li>
+            <li><a href="#">Cotización <img src="imagenes/bx-purchase-tag-alt.svg" alt=""></a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <section class="inventario-view">
+            <fieldset>
+                <legend>Inventario</legend>
+                <div class="search-bar">
+                    <label for="busqueda">Buscar Producto:</label>
+                    <input type="text" id="busqueda" onkeyup="buscarProducto()" placeholder="Buscar por nombre o código...">
+                </div>
+                <table id="tablaInventario">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Descripción</th>
+                            <th>Categoría</th>
+                            <th>Precio Compra</th>
+                            <th>Precio Venta</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>00001</td>
+                            <td>Producto A</td>
+                            <td>Electrónica</td>
+                            <td>$100.00</td>
+                            <td>$150.00</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>00002</td>
+                            <td>Producto B</td>
+                            <td>Hogar</td>
+                            <td>$60.00</td>
+                            <td>$90.00</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>00003</td>
+                            <td>Producto C</td>
+                            <td>Oficina</td>
+                            <td>$40.00</td>
+                            <td>$65.00</td>
+                            <td>20</td>
+                        </tr>
+                        <!-- Agrega más filas según sea necesario -->
+                    </tbody>
+                </table>
+            </fieldset>
+        </section>
+    </div>
+</body>
+</html>

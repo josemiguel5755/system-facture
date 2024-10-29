@@ -20,47 +20,48 @@ body {
    display: flex;
    position: fixed;
    z-index: 20;
+   background-color: #1a2035;
+   
+}
+
+.navegacion h1 {
+    color: #ffffff;
+   
 }
 
 
-/* .menu {
+.menu {
   
+    margin-top: 61px;
     position: fixed;
-   top: 90px;
-   bottom: 0;
-    
-    display: flex; 
-    justify-content: left; 
-   background-color: #ffffff;
-   padding: 5px;
-  border-radius: 5px;
-   width: 17%;
-   height: 650px;
-    position: sticky;
-} */
+  
+    background-color: #ffffff;
+    padding: 5px;
+   border-radius: 4px;
+    width: 17%;
+    height: 650px;
+    background-color: #1a2035;
+} 
 
 .menu li {
     list-style: none;
     margin: 5px;
+    margin-top: 10px;
 
   }
 
   .menu ul {
-    margin-top: 63px;
-    position: fixed;
-   
-    background-color: #ffffff;
-    padding: 5px;
-   border-radius: 5px;
-    width: 17%;
-    height: 650px;
+   margin-top: 30px;
   }
 
   .menu a {
+  
     color: black;
     text-decoration: none;
    font-size: 18px;
    margin: 10px;
+   color: #ffffff;
+  
 
 
   }
@@ -72,6 +73,7 @@ body {
     height: 30px;
     padding: 5px;
     border-radius: 5px;
+    
 }
 
 .menu img {
@@ -309,11 +311,11 @@ fieldset {
 
 .contenedor  {
     background-color: #ffffff;
-padding-top: 200px;
+padding-top: 369px;
 max-width: 90%;
-max-height: 300px;
+max-height: 500%;
 position: relative;
-bottom: 100px;
+bottom: 70px;
 border-radius: 5px;
 
 
@@ -341,7 +343,7 @@ border-radius: 5px;
     height: 270px;
     width: 95%;
     position: relative;
-    bottom: 190px;
+    bottom: 350px;
     left: 2%;
 }
 
@@ -359,6 +361,33 @@ border-radius: 5px;
     display: flex;
     width: 20%;
     height: 25px;
+}
+
+
+.presentacion2 fieldset{
+    position: relative;
+    bottom: 160px;
+   left: -36%;
+   width: 139%;
+   height: 300px;
+}
+
+.presentacion2 input{
+    display: flex;
+   flex-direction: column;
+  
+}
+
+.areabeneficio {
+    position: relative;
+    left: 30%;
+    bottom: 240px;
+}
+
+.area2 {
+    position: relative;
+    bottom: 480px;
+    left: 60%;
 }
 
 .beneficio  {
@@ -408,6 +437,8 @@ border-radius: 5px;
     left: 35%;
     
 }
+
+
 
 /* .beneficio label{
    position: relative;
