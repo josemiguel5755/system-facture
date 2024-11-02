@@ -30,9 +30,9 @@
         
                 const total = subtotal + iva - descuento + impuestosAdicionales;
         
-                subtotalElem.textContent = subtotal.toFixed(2) + ' €';
-                ivaElem.textContent = iva.toFixed(2) + ' €';
-                totalElem.textContent = total.toFixed(2) + ' €';
+                subtotalElem.textContent = subtotal.toFixed(2) + ' R$';
+                ivaElem.textContent = iva.toFixed(2) + ' R$';
+                totalElem.textContent = total.toFixed(2) + ' R$';
             }
         
             function agregarLinea() {
@@ -59,7 +59,7 @@
                     const cantidad = parseFloat(cantidadInput.value) || 0;
                     const precioUnitario = parseFloat(precioInput.value) || 0;
                     const importe = cantidad * precioUnitario;
-                    fila.querySelector('.importe').textContent = importe.toFixed(2) + ' €';
+                    fila.querySelector('.importe').textContent = importe.toFixed(2) + ' R$';
                     calcularTotales();
                 }
         
