@@ -1,9 +1,13 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hackdere Tech - Gestión de Inventario</title>
+    <title>Hackdere Tech</title>
     <link rel="stylesheet" href="estilos.css">
     <script>
         function recalcularTodo() {
@@ -28,110 +32,51 @@
             });
         }
     </script>
-    <style>
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-        }
-        fieldset {
-            border: 1px solid #ccc;
-            padding: 15px;
-        }
-        legend {
-            font-weight: bold;
-            color: #333;
-        }
-        .navegacion, .menu, .content {
-            margin-bottom: 20px;
-        }
-
-        /* Barra de navegación */
-        .navegacion {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        .navegacion h1 {
-            margin: 0;
-        }
-
-        /* Menú de navegación lateral */
-        .menu ul {
-            list-style: none;
-            padding: 0;
-        }
-        .menu ul li {
-            margin: 15px 0;
-            text-align: left;
-        }
-        .menu ul li a {
-            color: #333;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-        .menu ul li a img {
-            margin-left: 10px;
-            width: 20px;
-        }
-
-        /* Sección de inventario */
-        .search-bar {
-            margin-bottom: 10px;
-            text-align: right;
-        }
-        .search-bar input[type="text"] {
-            padding: 5px;
-            width: 200px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-        th, td {
-            padding: 8px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-        th {
-            background-color: #333;
-            color: white;
-        }
-    </style>
 </head>
 <body>
     <header>
         <nav class="navegacion">
-            <h1>Hackdere Tech - Sistema de Inventario</h1>
+            <h1>sistema de Facturacion</h1>
         </nav>
     </header>
 
     <div class="menu">
         <ul>
-            <li><a href="#">Inicio <img src="imagenes/bx-home.svg" alt=""></a></li>
-            <li><a href="#">Facturación <img src="imagenes/bx-notepad.svg" alt=""></a></li>
-            <li><a href="#">Inventario <img src="imagenes/bx-box.svg" alt=""></a></li>
-            <li><a href="#">Cuentas por cobrar <img src="imagenes/bx-money-withdraw.svg" alt=""></a></li>
-            <li><a href="#">Control de caja <img src="imagenes/bx-cog.svg" alt=""></a></li>
-            <li><a href="#">Contabilidad <img src="imagenes/bx-calculator.svg" alt=""></a></li>
-            <li><a href="#">Progreso <img src="imagenes/bx-bar-chart.svg" alt=""></a></li>
-            <li><a href="#">Cotización <img src="imagenes/bx-purchase-tag-alt.svg" alt=""></a></li>
+            <li><a href="index.html">Inicio
+                <img src="imagenes/bx-home.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="facturas.html">Facturacion
+                <img src="imagenes/bx-notepad.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="inventario.html">Inventario
+                <img src="imagenes/bx-box.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="cuentasporcobrar.html">Cuentas por cobrar
+                <img src="imagenes/bx-money-withdraw.svg" alt="">
+            </a></li>º
+            <br>
+            <li><a href="">Control de caja
+                <img src="imagenes/bx-cog.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="">Contabilidad
+                <img src="imagenes/bx-calculator.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="">Progreso
+                <img src="imagenes/bx-bar-chart.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="">Cotizacion
+                <img src="imagenes/bx-purchase-tag-alt.svg" alt="">
+            </a></li>
         </ul>
     </div>
 
-    <div class="container">
+    <div class="container-invet">
         <section class="inventario-view">
             <fieldset>
                 <legend>Inventario</legend>
@@ -175,11 +120,54 @@
                             <td>$65.00</td>
                             <td>20</td>
                         </tr>
+                        <tr>
+                            <td>00004</td>
+                            <td>cafe</td>
+                            <td>Oficina</td>
+                            <td>$40.00</td>
+                            <td>$65.00</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>00005</td>
+                            <td>confle</td>
+                            <td>Oficina</td>
+                            <td>$40.00</td>
+                            <td>$65.00</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>00006</td>
+                            <td>refesco</td>
+                            <td>Oficina</td>
+                            <td>$40.00</td>
+                            <td>$65.00</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>00007</td>
+                            <td>viscocho</td>
+                            <td>Oficina</td>
+                            <td>$40.00</td>
+                            <td>$65.00</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>00008</td>
+                            <td>sopa</td>
+                            <td>Oficina</td>
+                            <td>$40.00</td>
+                            <td>$65.00</td>
+                            <td>20</td>
+                        </tr>
                         <!-- Agrega más filas según sea necesario -->
                     </tbody>
                 </table>
             </fieldset>
         </section>
     </div>
+    <footer>
+
+    </footer>
 </body>
 </html>

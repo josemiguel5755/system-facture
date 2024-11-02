@@ -68,7 +68,7 @@ body {
 
 
 .menu li:hover {
-    background-color:#d2e8ff ; 
+    background-color:#575962 ; 
     width: 100%;
     height: 30px;
     padding: 5px;
@@ -457,3 +457,301 @@ border-radius: 5px;
     padding: 5px;
     height: 60px;
 } */
+
+
+/* pagina de inventario */
+
+.container-invet {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+    left: 20%;
+    top: 100px;
+}
+
+.container-invet fieldset {
+    width: 150%;
+}
+
+.container-invet legend {
+    font-size: 20px;
+}
+
+/* Sección de inventario */
+.search-bar {
+    margin-bottom: 10px;
+    text-align: right;
+}
+.search-bar input[type="text"] {
+    padding: 5px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#tablaInventario {
+    width: 100%;
+}
+
+#tablaInventario table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+} 
+#tablaInventario th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+    
+}
+#tablaInventario th {
+    background-color: #333;
+    color: white;
+   
+} 
+
+
+/* pagina de cuentas por cobrar */
+
+.container-cuenta {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 990px;
+    position: relative;
+    top: 90px;
+    left: 20%;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #007bff;
+}
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.form-row .form-group {
+    flex: 1;
+    margin-right: 10px;
+}
+.form-row .form-group:last-child {
+    margin-right: 0;
+}
+.form-group label {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 5px;
+    display: block;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+.btn {
+    width: 97%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+#cuentasTabla table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin-top: 20px;
+    text-align: center;
+  
+}
+#cuentasTabla  {
+    text-align: center;
+    /* border-bottom: 1px solid #dee2e6; */
+    border: none;
+   
+    
+}
+#cuentasTabla  th {
+    background-color: #007bff;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 9px;
+    padding-left: 68px;
+  text-align: center;
+    
+  
+}
+#cuentasTabla  tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.paid {
+    background-color: #d4edda;
+    color: #155724;
+}
+/* Estilos para los botones de acción */
+.status-btn, .action-btn {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    color: #ffffff;
+    border: none;
+    font-size: 12px;
+    
+    
+}
+.status-btn {
+    background-color: #28a745; /* Verde para Marcar como Pagado */
+}
+.status-btn:hover {
+    background-color: #218838;
+}
+.action-btn {
+    background-color: #dc3545; /* Rojo para Eliminar */
+   
+}
+.action-btn:hover {
+    background-color: #c82333;
+}
+
+
+
+
+/* pagina de facturacion */ 
+
+
+
+.container-facture {
+    max-width: 1200px;
+    margin: auto;
+  position: relative;
+  top: 120px;
+}
+
+
+.form-groups-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 80%;
+    position: relative;
+    left: 20%;
+}
+
+.form-group {
+    flex: 1;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.lineas-factura {
+    margin: 20px auto;
+    text-align: center;
+    width: 50%;
+    margin-left: 30%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input select textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.lineas-factura button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#tablaProductos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#tablaProductos th, #tablaProductos td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+#tablaProductos th {
+    background-color: #f4f4f4;
+}
+
+.resumen {
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 20%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.resumen h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.resumen-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.resumen-item input {
+    width: 100px;
+    text-align: right;
+}
+
+.total p {
+    font-weight: bold;
+    font-size: 1.2em;
+}

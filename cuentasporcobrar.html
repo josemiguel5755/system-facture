@@ -1,0 +1,150 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackdere Tech</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script>
+        function agregarCuenta() {
+            const id = document.getElementById("id").value.trim();
+            const nombre = document.getElementById("nombre").value.trim();
+            const telefono = document.getElementById("telefono").value.trim();
+            const direccion = document.getElementById("direccion").value.trim();
+    
+            if (id && nombre && telefono && direccion) {
+                const tabla = document.getElementById("cuentasTabla").getElementsByTagName("tbody")[0];
+                const nuevaFila = tabla.insertRow();
+    
+                nuevaFila.insertCell(0).innerText = id;
+                nuevaFila.insertCell(1).innerText = nombre;
+                nuevaFila.insertCell(2).innerText = telefono;
+                nuevaFila.insertCell(3).innerText = direccion;
+    
+                // Botones de acciones
+                const acciones = nuevaFila.insertCell(4);
+                acciones.innerHTML = `
+                    <button class="status-btn" onclick="marcarPagado(this)">Marcar como Pagado</button>
+                    <button class="action-btn" onclick="eliminarCuenta(this)">Eliminar</button>
+                `;
+    
+                // Limpiar campos
+                document.getElementById("id").value = "";
+                document.getElementById("nombre").value = "";
+                document.getElementById("telefono").value = "";
+                document.getElementById("direccion").value = "";
+            } else {
+                alert("Por favor complete todos los campos.");
+            }
+        }
+    
+        function eliminarCuenta(btn) {
+            const fila = btn.parentNode.parentNode;
+            fila.parentNode.removeChild(fila);
+        }
+    
+        function marcarPagado(btn) {
+            const fila = btn.parentNode.parentNode;
+            fila.classList.toggle("paid");
+    
+            if (fila.classList.contains("paid")) {
+                btn.innerText = "Marcar como Pendiente";
+            } else {
+                btn.innerText = "Marcar como Pagado";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navegacion">
+            <h1>sistema de Facturacion</h1>
+        </nav>
+    </header>
+
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Inicio
+                <img src="imagenes/bx-home.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="facturas.html">Facturacion
+                <img src="imagenes/bx-notepad.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="inventario.html">Inventario
+                <img src="imagenes/bx-box.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="#">Cuentas por cobrar
+                <img src="imagenes/bx-money-withdraw.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="">Control de caja
+                <img src="imagenes/bx-cog.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="">Contabilidad
+                <img src="imagenes/bx-calculator.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="">Progreso
+                <img src="imagenes/bx-bar-chart.svg" alt="">
+            </a></li>
+            <br>
+            <li><a href="">Cotizacion
+                <img src="imagenes/bx-purchase-tag-alt.svg" alt="">
+            </a></li>
+        </ul>
+    </div>
+
+    <div class="container-cuenta">
+        <h1>Cuentas por Cobrar</h1>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="id">ID del Cliente</label>
+                <input type="text" id="id" placeholder="Ingrese ID">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre del Cliente</label>
+                <input type="text" id="nombre" placeholder="Ingrese nombre del cliente">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="text" id="telefono" placeholder="Ingrese teléfono">
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección</label>
+                <input type="text" id="direccion" placeholder="Ingrese dirección">
+            </div>
+        </div>
+        <button class="btn" onclick="agregarCuenta()">Agregar Cuenta</button>
+    
+        <table id="cuentasTabla" >
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre del Cliente</th>
+                    <th>Teléfono</th>
+                    <th>Dirección</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas se generarán aquí mediante JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+</html>
